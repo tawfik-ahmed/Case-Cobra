@@ -211,6 +211,7 @@ const DesignConfigurator = ({
             <NextImage
               src={imageUrl}
               fill
+              unoptimized
               alt="your image"
               className="pointer-events-none"
             />
