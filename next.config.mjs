@@ -1,14 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["utfs.io"],
+    domains: ["utfs.io", "ufs.sh"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ufs.sh",
+        pathname: "/f/**",
+      },
+    ],
   },
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "lh3.googleusercontent.com",
-    },
-  ],
   async headers() {
     return [
       {
